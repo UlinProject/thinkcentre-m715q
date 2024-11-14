@@ -57,7 +57,7 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 
 <i>If you don't want to flash a GEN2 system, you can download Smokeless_UMAF to a USB stick from an external source and load TianocoreBios from there with some features unlocked. However, you will only get full functionality from an unlocked BIOS (and note that incorrect settings in Smokeless, as well as settings in the flashed BIOS, can damage the board, in the best case you will have to flash the BIOS chip).</i>
 
-## Overclocking and Undervolting (applies to both 2400GE and 2200GE)
+## Overclocking and Undervolting (applies to both 2400GE and 2200GE):
 Please note that this list is not complete (lower frequencies can be undervolted even more).
 Added lower voltages for higher frequencies. Also added 1.0 GHz and added overclock to 3.6 GHz (you can just leave 3.6 off your list if you don't need it).
 
