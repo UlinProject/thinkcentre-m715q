@@ -21,7 +21,13 @@ All rights reserved.
 
 ## Specifications:
 
+<b><img src="./img/model_list0.jpg" width="30%"></img><img src="./img/model_list1.jpg" width="30%"></img></b>
+
+
 ### Gen1:
+
+<b><img src="./img/gen1.jpg" width="40%"></img></b>
+
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 1 |
@@ -31,6 +37,9 @@ All rights reserved.
 | bios | Winbond 25q64fwsig (8mb) |
 
 ### Gen2:
+
+<b><img src="./img/gen2.jpg" width="40%"></img></b>
+
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 2 |
@@ -61,13 +70,15 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 Please note that this list is not complete (lower frequencies can be undervolted even more).
 Added lower voltages for higher frequencies. Also added 1.0 GHz and added overclock to 3.6 GHz (you can just leave 3.6 off your list if you don't need it).
 
-|0|        1|        2|         3|          4|
-|--------| --------| --------|  --------|   --------|
-|3600 Mhz| 3200 Mhz| 2300 Mhz|  1600 Mhz | 1000 Mhz |
-|1.293750| 1.293750| 97500 v|   87500 v |  77500 v |
-|90|       80|       8a (138)|  80 |       50 (80) |
-|8|        8|        C (12)|    10 |       10 (16) |
-|29|       29|       5C (92) v| 6C |       7C (124) v |
+| comment                | 0|        1|        2|         3|          4|
+| -----------------------| --------| --------| --------|  --------|   --------|
+| should be displayed      |3600 Mhz| 3200 Mhz| 2300 Mhz|  1600 Mhz | 1000 Mhz |
+| should be displayed      |1.293750| 1.293750 | 97500 v|   87500 v |  77500 v |
+| what needs to be entered |90|       80|       8a (138)|  80 |       50 (80) |
+| what needs to be entered |8|        8|        C (12)|    10 |       10 (16) |
+| what needs to be entered |29|       29|       5C (92) v| 6C |       7C (124) v |
+
+<b><i>What is in brackets and the volt sign does not need to be entered, it was only useful when composing these numbers.</i></b>
 
 <i>Please note that overclocking does not affect turbo mode (which is only available on one core).</i>
 
@@ -81,14 +92,19 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 | 1,45 ≤ 1,444 | <b>4.076</b> |
 | 1,5 ≤ 1,494 | <b>4.129</b> |
 
+<b>The parameters may be unique to your processor, so the values ​​are approximate.</b>
+
 ## Processor scalping (tested on 2200GE and 2400GE):
 
-Few people know that AMD APUs have thermal paste inside, and quite a thick layer at that, and this thermal paste dries out over time. For effective scalping, it is recommended to soak the processor in a solvent for 10-20 minutes, then cut off the sealant with a razor blade (be extremely careful or skip the scalping step, or better yet, buy a ready-made scalping kit for such processors). It is important not to scratch the printed circuit board, as this can damage the APU. Next, you can apply a thin layer of liquid metal to the processor, for example, with cotton swabs, or try not to use the processor cover (not tested and most likely impossible) and glue the processor cover onto the sealant (or the cover is not glued, but there is a risk of metal leakage outside the processor). <i>You can also isolate the APU components by coating them with varnish.</i>
+<b><img src="./img/cpu_scalping.jpg" width="40%"></img></b>
 
-<i>Please note that we only applied liquid metal to the CPU itself under its heat spreader, it is completely chemically stable as the CPU cover is nickel plated copper. </i>
+Few people know that AMD APUs have thermal paste inside, and quite a thick layer at that, and this thermal paste dries out over time. For effective scalping, it is recommended to soak the processor in a solvent for 10-20 minutes, then cut off the sealant with a razor blade (be extremely careful or skip the scalping step, or better yet, buy a ready-made scalping kit for such processors). It is important not to scratch the printed circuit board, as this can damage the APU. Next, you can apply a thin layer of liquid metal to the processor, for example, with cotton swabs, or try not to use the processor cover at all (not tested and most likely impossible with this cooling system) and seal the processor cover with sealant (if the cover is not glued, there is a risk of metal leakage outside the processor).
 
-<i><b>DO NOT</b> try to apply liquid metal between the cooler and the CPU cover, even if it is copper (pure copper will absorb the liquid metal over time and impair cooling)</i>
+It is also recommended to isolate the APU components by coating them with varnish or using special frames.
 
+<i>Please note that we only applied liquid metal to the processor itself under its heatsink, the heatsink is completely chemically stable, as the processor cover is made of nickel-plated copper.</i>
+
+<i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>
 
 
 
