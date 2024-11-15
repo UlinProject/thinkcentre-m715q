@@ -27,7 +27,7 @@ All rights reserved.
 
 ### Gen1:
 
-<b><img src="./img/gen1.jpg" width="40%"></img></b>
+<b><img src="./img/gen1.jpg" width="30%"></img></b>
 
 | name | value |
 | ---- | ----- |
@@ -39,7 +39,7 @@ All rights reserved.
 
 ### Gen2:
 
-<b><img src="./img/gen2.jpg" width="40%"></img></b>
+<b><img src="./img/gen2.jpg" width="30%"></img></b>
 
 | name | value |
 | ---- | ----- |
@@ -50,6 +50,9 @@ All rights reserved.
 | bios | MX25U12835F (16mb) |
 
 ## Converting a Gen1 board to a Gen2 board:
+
+<b><img src="./img/convert.jpg" width="40%"></img></b>
+
 Although the boards are slightly different, a Gen1 board can easily be converted to a Gen2 board, allowing access to the new processors and features.
 
 The GEN1 board has a Winbond 25q64fwsig BIOS chip (see photos for chip location). You should replace this chip with a 16MB BIOS chip, such as the MX25U12835F or W25Q128FWSIG.
@@ -68,6 +71,9 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 <i>If you don't want to flash a GEN2 system, you can download Smokeless_UMAF to a USB stick from an external source and load TianocoreBios from there with some features unlocked. However, you will only get full functionality from an unlocked BIOS (and note that incorrect settings in Smokeless, as well as settings in the flashed BIOS, can damage the board, in the best case you will have to flash the BIOS chip).</i>
 
 ## Overclocking and Undervolting (applies to both 2400GE and 2200GE):
+
+<b><img src="./img/overclock.jpg" width="30%"></img></b>
+
 Please note that this list is not complete (lower frequencies can be undervolted even more).
 Added lower voltages for higher frequencies. Also added 1.0 GHz and added overclock to 3.6 GHz (you can just leave 3.6 off your list if you don't need it).
 
@@ -97,7 +103,7 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 ## Processor scalping (tested on 2200GE and 2400GE):
 
-<b><img src="./img/cpu_scalping.jpg" width="20%"></img></b>
+<b><img src="./img/cpu_scalping.jpg" width="30%"></img></b>
 
 Few people know that AMD APUs have thermal paste inside, and quite a thick layer at that, and this thermal paste dries out over time. For effective scalping, it is recommended to soak the processor in a solvent for 10-20 minutes, then cut off the sealant with a razor blade (be extremely careful or skip the scalping step, or better yet, buy a ready-made scalping kit for such processors). It is important not to scratch the printed circuit board, as this can damage the APU. Next, you can apply a thin layer of liquid metal to the processor, for example, with cotton swabs, or try not to use the processor cover at all (not tested and most likely impossible with this cooling system) and seal the processor cover with sealant (if the cover is not glued, there is a risk of metal leakage outside the processor).
 
