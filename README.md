@@ -1,5 +1,7 @@
 <div id="header" align="center">
-  
+
+<p align="center"><img src="./img/model_list0.jpg" width="40%"></img></p>
+
   <b>[thinkcentre-m715q]</b>
   
   (Modification kit for small PC m715q..)
@@ -21,8 +23,7 @@ All rights reserved.
 
 ## Specifications:
 
-<b><img src="./img/model_list0.jpg" width="30%"></img><img src="./img/model_list1.jpg" width="30%"></img></b>
-
+<b><img src="./img/model_list1.jpg" width="30%"></img></b>
 
 ### Gen1:
 
@@ -96,7 +97,7 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 ## Processor scalping (tested on 2200GE and 2400GE):
 
-<b><img src="./img/cpu_scalping.jpg" width="40%"></img></b>
+<b><img src="./img/cpu_scalping.jpg" width="20%"></img></b>
 
 Few people know that AMD APUs have thermal paste inside, and quite a thick layer at that, and this thermal paste dries out over time. For effective scalping, it is recommended to soak the processor in a solvent for 10-20 minutes, then cut off the sealant with a razor blade (be extremely careful or skip the scalping step, or better yet, buy a ready-made scalping kit for such processors). It is important not to scratch the printed circuit board, as this can damage the APU. Next, you can apply a thin layer of liquid metal to the processor, for example, with cotton swabs, or try not to use the processor cover at all (not tested and most likely impossible with this cooling system) and seal the processor cover with sealant (if the cover is not glued, there is a risk of metal leakage outside the processor).
 
