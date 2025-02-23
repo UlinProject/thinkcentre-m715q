@@ -115,13 +115,57 @@ It is also recommended to isolate the APU components by coating them with varnis
 
 <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>
 
+## Unlock TDP
 
+At the moment this problem is not solved at the BIOS level, but is solved at the operating system level (Windows or Linux).
 
+CPU Family: Raven
 
+SMU BIOS Interface Version: 5
 
+Version: v0.16.0 
 
+PM Table Version: 1e0004
 
+|        Name         |   Value   |     Parameter      |
+|---------------------|-----------|--------------------|
+| STAPM LIMIT         |    35.000 | stapm-limit        |
+| STAPM VALUE         |     8.257 |                    |
+| PPT LIMIT FAST      |    76.000 | fast-limit         |
+| PPT VALUE FAST      |     8.990 |                    |
+| PPT LIMIT SLOW      |    76.000 | slow-limit         |
+| PPT VALUE SLOW      |     8.392 |                    |
+| StapmTimeConst      |   100.000 | stapm-time         |
+| SlowPPTTimeConst    |     5.000 | slow-time          |
+| PPT LIMIT APU       |       nan | apu-slow-limit     |
+| PPT VALUE APU       |       nan |                    |
+| TDC LIMIT VDD       |    65.000 | vrm-current        |
+| TDC VALUE VDD       |     2.381 |                    |
+| TDC LIMIT SOC       |    50.000 | vrmsoc-current     |
+| TDC VALUE SOC       |     4.295 |                    |
+| EDC LIMIT VDD       |    95.000 | vrmmax-current     |
+| EDC VALUE VDD       |    73.013 |                    |
+| EDC LIMIT SOC       |    75.000 | vrmsocmax-current  |
+| EDC VALUE SOC       |    18.217 |                    |
+| THM LIMIT CORE      |    95.000 | tctl-temp          |
+| THM VALUE CORE      |    40.853 |                    |
+| STT LIMIT APU       |       nan | apu-skin-temp      |
+| STT VALUE APU       |       nan |                    |
+| STT LIMIT dGPU      |       nan | dgpu-skin-temp     |
+| STT VALUE dGPU      |       nan |                    |
+| CCLK Boost SETPOINT |    30.000 | power-saving /     |
+| CCLK BUSY VALUE     |     6.150 | max-performance    |
 
+As you can see, the default PPT parameters are very strange, I still haven't found the optimal parameters, so I just recommend raising the TDP to 60W.
+
+```bash
+# TDP, 35=>60
+ryzenadj --stapm-limit=60000
+```
+
+(This code can simply be placed in rc.local, in Windows you can use Ryzen Controller.)
+
+<b>This section is not complete.</b>
 
 
 
