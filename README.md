@@ -17,7 +17,7 @@
 This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
 
 ## Disclaimer:
-Do everything described here at your own risk. Damage to your computer may occur at any stage of these procedures.
+<b>Do everything described here at your own risk.</b> Damage to your computer may occur at any stage of these procedures.
 
 All rights reserved.
 
