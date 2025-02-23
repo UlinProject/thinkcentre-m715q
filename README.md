@@ -17,7 +17,7 @@
 This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
 
 ## Disclaimer:
-Do everything outlined here at your own risk. Damage to your computer can occur at any step during these procedures.
+Do everything described here at your own risk. Damage to your computer may occur at any stage of these procedures.
 
 All rights reserved.
 
@@ -44,8 +44,8 @@ All rights reserved.
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 2 |
-| cpu0 | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (overclock: 3.6Ghz) (turbo: one x1 3.8Ghz)) |
-| cpu1 | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (overclock: 3.6Ghz) (turbo: one x1 3.6Ghz)) |
+| cpu0 | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.8Ghz)) |
+| cpu1 | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.6Ghz)) |
 | mem | DDR4-2933, max: 32Gb (officially) |
 | bios | MX25U12835F (16mb) |
 
@@ -87,7 +87,9 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 <b><i>What is in brackets and the volt sign does not need to be entered, it was only useful when composing these numbers.</i></b>
 
-<i>Please note that overclocking does not affect turbo mode (which is only available on one core).</i>
+<i>Please note that overclocking does not affect turbo mode.</i>
+
+<b>This section is not complete, I have not yet finally decided on the voltage. For 3.8 on 2400 we write 3.8Ghz 98 8 28.</b>
 
 ### For extreme overclocking (in case of an error, reflash the BIOS):
 
