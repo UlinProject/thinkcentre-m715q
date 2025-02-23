@@ -44,9 +44,10 @@ All rights reserved.
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 2 |
-| cpu0 | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.8Ghz)) |
-| cpu1 | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.6Ghz)) |
-| mem | DDR4-2933, max: 32Gb (officially) |
+| cpu0 (or cpu1) | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.8Ghz)) |
+| cpu1 (or cpu0) | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.6Ghz)) |
+| mem (officially) | DDR4-2933, max: 32Gb 
+| mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
 | bios | MX25U12835F (16mb) |
 
 ## Converting a Gen1 board to a Gen2 board:
