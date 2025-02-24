@@ -116,17 +116,16 @@ It is also recommended to isolate the APU components by coating them with varnis
 
 <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>
 
-## Unlock TDP
+## Unlock CPU TDP
 
 At the moment this problem is not solved at the BIOS level, but is solved at the operating system level (Windows or Linux).
 
-CPU Family: Raven
-
-SMU BIOS Interface Version: 5
-
-Version: v0.16.0 
-
-PM Table Version: 1e0004
+| name | value |
+| ------- | --- |
+| CPU Family | Raven |
+| SMU BIOS Interface Version | 5 |
+| Version | v0.16.0 |
+| PM Table Version | 1e0004 |
 
 |        Name         |   Value   |     Parameter      |
 |---------------------|-----------|--------------------|
