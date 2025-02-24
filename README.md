@@ -13,19 +13,19 @@
 </div>
 </div>
 
-## Description:
+## Description
 This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
 
-## Disclaimer:
+## Disclaimer
 <b>Do everything described here at your own risk.</b> Damage to your computer may occur at any stage of these procedures.
 
 All rights reserved.
 
-## Specifications:
+## Specifications
 
 <b><img src="./img/model_list1.jpg" width="30%"></img></b>
 
-### Gen1:
+### Gen1
 
 <b><img src="./img/gen1.jpg" width="30%"></img></b>
 
@@ -37,7 +37,7 @@ All rights reserved.
 | mem | DDR4-2400, max: 32Gb (officially) |
 | bios | Winbond 25q64fwsig (8mb) |
 
-### Gen2:
+### Gen2
 
 <b><img src="./img/gen2.jpg" width="30%"></img></b>
 
@@ -50,7 +50,7 @@ All rights reserved.
 | mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
 | bios | MX25U12835F (16mb) |
 
-## Converting a Gen1 board to a Gen2 board:
+## Converting a Gen1 board to a Gen2 board
 
 <b><img src="./img/convert.jpg" width="40%"></img></b>
 
@@ -62,7 +62,7 @@ BIOS chips are rated for 1.8V only. Do not attempt to solder a 3.3V chip. You wi
 
 The BIOS chip should be flashed with a stock BIOS or a modified BIOS from the repository (note that these have test serial numbers embedded in them)
 
-## Unlocked BIOS:
+## Unlocked BIOS
 Please note that there is an unlocked BIOS dump available in the repository, taken from a public source. It can do many things, such as enable overclocking and allocate video memory (up to 10GB, I think).
 
 It can be directly flashed to a GEN2 system. For GEN1 systems, see instructions on converting a GEN1 system to a GEN2 system.
@@ -71,7 +71,7 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 
 <i>If you don't want to flash a GEN2 system, you can download Smokeless_UMAF to a USB stick from an external source and load TianocoreBios from there with some features unlocked. However, you will only get full functionality from an unlocked BIOS (and note that incorrect settings in Smokeless, as well as settings in the flashed BIOS, can damage the board, in the best case you will have to flash the BIOS chip).</i>
 
-## Overclocking and Undervolting (applies to both 2400GE and 2200GE):
+## Overclocking and Undervolting (applies to both 2400GE and 2200GE)
 
 <b><img src="./img/overclock.jpg" width="30%"></img></b>
 
@@ -92,7 +92,7 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 <b>This section is not complete, I have not yet finally decided on the voltage. For 3.8 on 2400 we write 3.8Ghz 98 8 28.</b>
 
-### For extreme overclocking (in case of an error, reflash the BIOS):
+### For extreme overclocking (in case of an error, reflash the BIOS)
 
 | Voltage | Ghz |
 | ------- | --- |
@@ -104,7 +104,7 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 <b>The parameters may be unique to your processor, so the values ​​are approximate.</b>
 
-## Processor scalping (tested on 2200GE and 2400GE):
+## Processor scalping (tested on 2200GE and 2400GE)
 
 <b><img src="./img/cpu_scalping.jpg" width="30%"></img></b>
 
