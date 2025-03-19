@@ -4,7 +4,7 @@
 
   <b>[thinkcentre-m715q]</b>
   
-  (Modification kit for small PC m715q..)
+  (Modkit for small PC m715q..)
   </br></br>
 <div id="badges">
   <a href="https://github.com/denisandroid">
@@ -17,7 +17,9 @@
 This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
 
 ## Disclaimer
-<b>Do everything described here at your own risk.</b> Damage to your computer may occur at any stage of these procedures.
+Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there.
+
+<b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures.
 
 All rights reserved.
 
@@ -156,7 +158,7 @@ At the moment this problem is not solved at the BIOS level, but is solved at the
 | CCLK Boost SETPOINT |    30.000 | power-saving /     |
 | CCLK BUSY VALUE     |     6.150 | max-performance    |
 
-As you can see, the default PPT parameters are very strange, I still haven't found the optimal parameters, so I just recommend raising the TDP to 60W.
+As you can see, the default PPT parameters are very strange, I still haven’t found any specific optimal ones, so I simply recommend raising the TDP to 60 W (<b>but only after a complete modification of the cooling</b>).
 
 ```bash
 # TDP, 35=>60
