@@ -17,11 +17,11 @@
 This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
 
 ## Disclaimer
-Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there.
-
-<b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures.
-
-All rights reserved.
+| :boom: Disclaimer          |
+|:---------------------------|
+|  :warning:  Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there. |
+|  :warning:  <b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures. |
+|  :warning:  All rights reserved. |
 
 ## Specifications
 
