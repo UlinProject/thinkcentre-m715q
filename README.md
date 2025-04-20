@@ -92,7 +92,8 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 
 <i>Please note that overclocking does not affect turbo mode.</i>
 
-<b>This section is not complete, I have not yet finally decided on the voltage. For 3.8 on 2400 we write 3.8Ghz 98 8 28.</b>
+| :memo:        | <b>This section is not complete, I have not yet finally decided on the voltage. For 3.8 on 2400 we write 3.8Ghz 98 8 28.</b>    |
+|---------------|:-------------------------------------------|
 
 ### For extreme overclocking (in case of an error, reflash the BIOS)
 
@@ -104,7 +105,9 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 | 1,45 ≤ 1,444 | <b>4.076</b> |
 | 1,5 ≤ 1,494 | <b>4.129</b> |
 
-<b>The parameters may be unique to your processor, so the values ​​are approximate.</b>
+
+| :exclamation:        | <b>The parameters may be unique to your processor, so the values ​​are approximate.</b>       |
+|---------------|:-------------------------------------------|
 
 ## Processor scalping (tested on 2200GE and 2400GE)
 
@@ -116,7 +119,11 @@ It is also recommended to isolate the APU components by coating them with varnis
 
 <i>Please note that we only applied liquid metal to the processor itself under its heatsink, the heatsink is completely chemically stable, as the processor cover is made of nickel-plated copper.</i>
 
-<i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>
+
+
+
+| :exclamation:        | <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>       |
+|---------------|:-------------------------------------------|
 
 ## Unlock CPU TDP
 
@@ -167,9 +174,6 @@ ryzenadj --stapm-limit=60000
 
 (This code can simply be placed in rc.local, in Windows you can use Ryzen Controller.)
 
-<b>This section is not complete.</b>
-
-
-
-
+| :memo:        | <b>This section is not complete.</b>       |
+|---------------|:-------------------------------------------|
 
