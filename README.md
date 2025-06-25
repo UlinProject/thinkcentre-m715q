@@ -177,3 +177,24 @@ ryzenadj --stapm-limit=60000
 | :memo:        | <b>This section is not complete.</b>       |
 |---------------|:-------------------------------------------|
 
+
+## Known issues
+
+#### • Poor performance after reboot (gen2, linux)
+
+It has been observed that if the system is rebooted (e.g. with reboot command), the Linux tsc clock source is always lost, which causes the whole system performance to drop to very low levels (CPU, RAM). This issue is not fixed by BIOS updates and seems to have been around for a long time. If you set tsc=unstable then the performance on reboot is always constant but also slightly lower than on first boot, which suggests that there really is some problem with tsc.
+
+```dmesg
+[    8.502316] clocksource: timekeeping watchdog on CPU0: Marking clocksource 'tsc' as unstable because the skew is too large:
+[    8.502335] clocksource:                       'hpet' wd_nsec: 495412266 wd_now: 74b2d4c wd_last: 6def0b2 mask: ffffffff
+[    8.502343] clocksource:                       'tsc' cs_nsec: 496288695 cs_now: 1a21e4cda2 cs_last: 19b1b24352 mask: ffffffffffffffff
+[    8.502349] clocksource:                       Clocksource 'tsc' skewed 876429 ns (0 ms) over watchdog 'hpet' interval of 495412266 ns (495 ms)
+[    8.502355] clocksource:                       'tsc' is current clocksource.
+[    8.502371] tsc: Marking TSC unstable due to clocksource watchdog
+[    8.502392] TSC found unstable after boot, most likely due to broken BIOS. Use 'tsc=unstable'.
+[    8.502394] sched_clock: Marking unstable (8511381561, -8990127)<-(8520197471, -17805900)
+[    8.502614] clocksource: Checking clocksource tsc synchronization from CPU 4 to CPUs 0,5.
+[    8.502630] clocksource: Override clocksource tsc is unstable and not HRT compatible - cannot switch while in HRT/NOHZ mode
+[    8.502664] clocksource: Switched to clocksource hpet
+```
+
