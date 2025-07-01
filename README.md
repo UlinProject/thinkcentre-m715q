@@ -197,4 +197,33 @@ It has been observed that if the system is rebooted (e.g. with reboot command), 
 [    8.502630] clocksource: Override clocksource tsc is unstable and not HRT compatible - cannot switch while in HRT/NOHZ mode
 [    8.502664] clocksource: Switched to clocksource hpet
 ```
+| :memo:        | <b>There is currently no complete solution to this problem, you can simply turn on/off the device instead of rebooting.</b>       |
+|---------------|:-------------------------------------------|
+
+#### • `amd_pstate` not working (gen2, linux)
+
+While this is not a specific CPU frequency and voltage management issue on this device, since `acpi-cpufreq` works fine and well, it is impossible not to mention it.
+
+```dmesg
+[    6.884017] amd_pstate_ut: amd_pstate_ut_acpi_cpc_valid the _CPC object is not present in SBIOS!
+[    6.884022] amd_pstate_ut: 1    amd_pstate_ut_acpi_cpc_valid	 fail: -22!
+[    6.884025] amd_pstate_ut: 2    amd_pstate_ut_check_enabled	 success!
+[    6.884029] amd_pstate_ut: 3    amd_pstate_ut_check_perf	 success!
+[    6.884032] amd_pstate_ut: 4    amd_pstate_ut_check_freq	 success!
+[    6.884037] amd_pstate_ut: 5    amd_pstate_ut_check_driver	 success!
+```
+
+#### • The integrated video card switches off from time to time, which is especially noticeable on `linux zen` kernels  (gen2, 2400GE, linux)
+
+Your video card may sometimes turn off and you won't even know why. In dmesg logs you will only see that your video card turned off and on, and some games may show various strange effects. This problem is relevant on modern Linux (2025) and repeats itself over and over again without any symptoms (most likely at times when your gpu frequency increases).
+
+Solution, you need to add this to cmdline:
+```
+mdgpu.gttsize=8192 amdgpu.lockup_timeout=1000 amdgpu.gpu_recovery=1 amdgpu.noretry=0 amdgpu.ppfeaturemask=0xfffd3fff amdgpu.deep_color=1 systemd.unified_cgroup_hierarchy=true
+```
+
+And add this to the file `/etc/environment`
+```
+AMD_DEBUG=nodcc
+```
 
