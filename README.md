@@ -213,6 +213,9 @@ While this is not a specific CPU frequency and voltage management issue on this 
 [    6.884037] amd_pstate_ut: 5    amd_pstate_ut_check_driver	 success!
 ```
 
+| :memo:        | <b>The solution has not yet been found.</b>       |
+|---------------|:-------------------------------------------|
+
 #### • The integrated video card switches off from time to time, which is especially noticeable on `linux zen` kernels  (gen2, 2400GE, linux)
 
 Your video card may sometimes turn off and you won't even know why. In dmesg logs you will only see that your video card turned off and on, and some games may show various strange effects. This problem is relevant on modern Linux (2025) and repeats itself over and over again without any symptoms (most likely at times when your gpu frequency increases).
