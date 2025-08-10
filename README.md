@@ -34,10 +34,19 @@ This is a collection of mods that can be performed on the m715q to get the most
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 1 |
-| cpu_0 | AMD PRO A12-8870E (x4 2.9 (turbo: one x1 3.8Ghz)) |
-| cpu_1 | AMD PRO A10-8770E (x4 2.8 (turbo: one x1 3.5Ghz)) |
+| maximum cpu | AMD PRO A12-8870E (x4 2.9 (turbo: single core 3.8Ghz)) |
+| standard cpu | AMD PRO A10-8770E (x4 2.8 (turbo: single core 3.5Ghz)) |
 | mem | DDR4-2400, max: 32Gb (officially) |
-| bios | Winbond 25q64fwsig (8mb) |
+| bios | winbond 25q64fwsig (8mb/64mbit, 1.8v) |
+| vrm | ISL62773 (0.5V-1.55V, 6.25mV step) |
+| sound | ALC233-CG, internal mono speaker |
+| sata | x1 3.0 (6Gbit/s) |
+| multicontroller (motherboard) | ITE 8738 |
+| additional controller (motherboard) | NPCT652L (FAN, ?..) |
+| usb 2.0 | single GL852G-MNY50 (480mb/s common for all usb 2.0 ports for this mini pc) |
+| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
+| gpio list | ? |
+| addition sensors | temperature sensor near vrm |
 
 ### Gen2
 
@@ -46,11 +55,21 @@ This is a collection of mods that can be performed on the m715q to get the most
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 2 |
-| cpu0 (or cpu1) | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.8Ghz)) |
-| cpu1 (or cpu0) | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (overclock: 3.6Ghz/3.8Ghz) (turbo: one x1 3.6Ghz)) |
-| mem (officially) | DDR4-2933, max: 32Gb 
+| maximum cpu | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
+| standard cpu | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.6Ghz)) |
+| mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
 | mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
-| bios | MX25U12835F (16mb) |
+| bios | MX25U12835F (16mb/128mbit, 1.8v) |
+| vrm | ISL62773 (0.5V-1.55V, 6.25mV step) |
+| sound | ALC233-CG, internal mono speaker |
+| pcie | nvme (31.504 Gb/s PCIe bandwidth, 8.0 GT/s PCIe x4, cpu channel), wifi (?, x1, cpu channel), lan (?, x1, RT8111EPV, 1Gbit, cpu channel) |
+| sata | x1 3.0 (6Gbit/s) |
+| multicontroller (motherboard) | ITE 8738 |
+| additional controller (motherboard) | NPCT652L (FAN, ?..) |
+| usb 2.0 | single GL852G-MNY50 (480mb/s common for all usb 2.0 ports for this mini pc) |
+| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
+| gpio list | ? |
+| addition sensors | temperature sensor near vrm |
 
 ## Converting a Gen1 board to a Gen2 board
 
