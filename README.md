@@ -34,8 +34,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 1 |
-| maximum cpu | AMD PRO A12-8870E (x4 2.9 (turbo: single core 3.8Ghz)) |
-| standard cpu | AMD PRO A10-8770E (x4 2.8 (turbo: single core 3.5Ghz)) |
+| maximum cpu | PRO A12-8870E (x4 2.9Ghz (turbo: single core 3.8Ghz)) |
+| standard cpu | PRO A10-8770E (x4 2.8Ghz (turbo: single core 3.5Ghz)) |
 | mem | DDR4-2400, max: 32Gb (officially) |
 | bios | winbond 25q64fwsig (8mb/64mbit, 1.8v) |
 | vrm | ISL62773 (0.5V-1.55V, 6.25mV step) |
@@ -55,8 +55,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | name | value |
 | ---- | ----- |
 | board | m715q GEN 2 |
-| maximum cpu | AMD Ryzen 5 PRO 2400GE (x4x2 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
-| standard cpu | AMD Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.6Ghz)) |
+| maximum cpu | Ryzen 5 PRO 2400GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
+| standard cpu | Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/ 3.8Ghz?) (turbo: single core x1 3.6Ghz)) |
 | mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
 | mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
 | bios | MX25U12835F (16mb/128mbit, 1.8v) |
