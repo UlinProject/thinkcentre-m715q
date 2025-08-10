@@ -144,7 +144,7 @@ It is also recommended to isolate the APU components by coating them with varnis
 | :exclamation:        | <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>       |
 |---------------|:-------------------------------------------|
 
-## Unlock CPU TDP
+## Unlock CPU TDP (only for GEN 2)
 
 At the moment this problem is not solved at the BIOS level, but is solved at the operating system level (Windows or Linux).
 
