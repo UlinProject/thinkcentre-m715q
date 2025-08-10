@@ -43,8 +43,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | sata | x1 3.0 (6Gbit/s) |
 | multicontroller (motherboard) | ITE 8738 |
 | additional controller (motherboard) | NPCT652L (FAN, ?..) |
-| usb 2.0 | single GL852G-MNY50 (480mb/s common for all usb 2.0 ports for this mini pc) |
-| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
+| usb 2.0 | single GL852G-MNY50 (480mb/s cpu channel common for all usb 2.0 ports for this mini pc) |
+| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps/s cpu channel (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
 | gpio list | ? |
 | addition sensors | temperature sensor near vrm |
 
@@ -66,8 +66,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | sata | x1 3.0 (6Gbit/s) |
 | multicontroller (motherboard) | ITE 8738 |
 | additional controller (motherboard) | NPCT652L (FAN, ?..) |
-| usb 2.0 | single GL852G-MNY50 (480mb/s common for all usb 2.0 ports for this mini pc) |
-| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
+| usb 2.0 | single GL852G-MNY50 (480mb/s cpu channel common for all usb 2.0 ports for this mini pc) |
+| usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps/s cpu channel (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
 | gpio list | ? |
 | addition sensors | temperature sensor near vrm |
 
