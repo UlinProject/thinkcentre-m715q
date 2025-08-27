@@ -38,7 +38,7 @@ This is a collection of mods that can be performed on the m715q to get the most
 | standard cpu | PRO A10-8770E (x4 2.8Ghz (turbo: single core 3.5Ghz)) |
 | mem | DDR4-2400, max: 32Gb (officially) |
 | bios | winbond 25q64fwsig (8mb/64mbit, 1.8v) |
-| vrm | ISL62773 (0.5V-1.55V, 6.25mV step) |
+| vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
 | sata | x1 3.0 (6Gbit/s) |
 | multicontroller (motherboard) | ITE 8738 |
@@ -60,7 +60,7 @@ This is a collection of mods that can be performed on the m715q to get the most
 | mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
 | mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
 | bios | MX25U12835F (16mb/128mbit, 1.8v) |
-| vrm | ISL62773 (0.5V-1.55V, 6.25mV step) |
+| vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
 | pcie | nvme (31.504 Gb/s PCIe bandwidth, 8.0 GT/s PCIe x4, cpu channel), wifi (?, x1, cpu channel), lan (?, x1, RT8111EPV, 1Gbit, cpu channel) |
 | sata | x1 3.0 (6Gbit/s) |
@@ -69,6 +69,7 @@ This is a collection of mods that can be performed on the m715q to get the most
 | usb 2.0 | single GL852G-MNY50 (480mb/s cpu channel common for all usb 2.0 ports for this mini pc) |
 | usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps/s cpu channel (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
 | gpio list | ? |
+| tested on |  overclock (cpu, mem, gpu?+), gpu memsize (1Gb, 2Gb, 3Gb, 8Gb, ...), smt shutdown, c6 en/off, pcie (aspm, performance mode) |
 | addition sensors | temperature sensor near vrm |
 
 <i>Fun fact:</i> There is a USB 3.0 port underneath the Ethernet port, but the USB 3.0 lines aren't actually connected to anything, and its original functionality remains a mystery. However, upon inspection, traces were found leading to a multi-controller.
@@ -98,22 +99,40 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 
 <b><img src="./img/overclock.jpg" width="30%"></img></b>
 
-Please note that this list is not complete (lower frequencies can be undervolted even more).
+<details open> 
+  <summary><b># V2.0 (tested on 2400GE)</b></summary>
+  
+| comment                  | 0 |        1|         2|         3|                 4    |
+| -----------------------| --------  | --------| --------   |  --------    | -------- |
+| should be displayed      |3800 Mhz | 3600 Mhz| 2300 Mhz   |  1600 Mhz    | 1000 Mhz |
+| should be displayed      |1.3000000| 1.293750| 393750 (?) |   393750 (?) |  393750  |
+| what needs to be entered |98       |       90|       8a   |   80         |       50 |
+| what needs to be entered |8        |        8|        C   |   10         |       10 |
+| what needs to be entered |29       |       29|       b9   |   b9         |       b9 |
+
+There are no exact recommendations here on how to set the frequencies and what frequencies you need, you can enter only pstate0 and get overclocking or enter all frequencies.
+
+You can also enter the following set of frequencies (tested on 2400GE): 3.6Ghz, 3.5Ghz, 3.2Ghz, 1.0Ghz.
+</details>
+
+
+<details> 
+  <summary><b># V1.0 (tested on 2200GE)</b></summary>
 Added lower voltages for higher frequencies. Also added 1.0 GHz and added overclock to 3.6 GHz (you can just leave 3.6 off your list if you don't need it).
 
 | comment                | 0|        1|        2|         3|          4|
 | -----------------------| --------| --------| --------|  --------|   --------|
 | should be displayed      |3600 Mhz| 3200 Mhz| 2300 Mhz|  1600 Mhz | 1000 Mhz |
 | should be displayed      |1.293750| 1.293750 | 97500 v|   87500 v |  77500 v |
-| what needs to be entered |90|       80|       8a (138)|  80 |       50 (80) |
-| what needs to be entered |8|        8|        C (12)|    10 |       10 (16) |
-| what needs to be entered |29|       29|       5C (92) v| 6C |       7C (124) v |
+| what needs to be entered |90|       80|       8a|  80 |       50 |
+| what needs to be entered |8|        8|        C|    10 |       10 |
+| what needs to be entered |29|       29|       5C| 6C |       7C|
+</details>
 
-<b><i>What is in brackets and the volt sign does not need to be entered, it was only useful when composing these numbers.</i></b>
 
-<i>Please note that overclocking does not affect turbo mode.</i>
 
-| :memo:        | <b>This section is not complete, I have not yet finally decided on the voltage. For 3.8 on 2400 we write 3.8Ghz 98 8 28.</b>    |
+
+| :memo:        | <b>This section is not complete, I have not yet decided on the voltage, and you should also understand that not every processor will be able to work at a lower voltage with the frequencies specified here.</b>    |
 |---------------|:-------------------------------------------|
 
 ### For extreme overclocking (in case of an error, reflash the BIOS)
@@ -138,10 +157,8 @@ Few people know that AMD APUs have thermal paste inside, and quite a thick layer
 
 It is also recommended to isolate the APU components by coating them with varnish or using special frames.
 
-<i>Please note that we only applied liquid metal to the processor itself under its heatsink, the heatsink is completely chemically stable, as the processor cover is made of nickel-plated copper.</i>
-
-
-
+| :memo:        | Please note that we only applied liquid metal to the processor itself under its heatsink, the heatsink is completely chemically stable, as the processor cover is made of nickel-plated copper.       |
+|---------------|:-------------------------------------------|
 
 | :exclamation:        | <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>       |
 |---------------|:-------------------------------------------|
