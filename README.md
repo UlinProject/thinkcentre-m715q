@@ -113,6 +113,9 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 There are no exact recommendations here on how to set the frequencies and what frequencies you need, you can enter only pstate0 and get overclocking or enter all frequencies.
 
 You can also enter the following set of frequencies (tested on 2400GE): 3.6Ghz, 3.5Ghz, 3.2Ghz, 1.0Ghz.
+
+| :memo:        | <b>This section is not complete, I have not yet decided on the voltage, and you should also understand that not every processor will be able to work at a lower voltage with the frequencies specified here.</b>    |
+|---------------|:-------------------------------------------|
 </details>
 
 
