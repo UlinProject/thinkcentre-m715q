@@ -41,8 +41,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
 | sata | x1 3.0 (6Gbit/s) |
-| multicontroller (motherboard) | ITE 8738 |
-| additional controller (motherboard) | NPCT652L (FAN, ?..com_port,ps/2,crtl?) |
+| multicontroller (motherboard) | ITE 8738 (FAN, COMPORT, ...) |
+| additional controller (motherboard) | NPCT652L (TPM) |
 | usb 2.0 | single GL852G-MNY50 (480mb/s cpu channel common for all usb 2.0 ports for this mini pc) |
 | usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps/s cpu channel (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
 | gpio list | ? |
@@ -64,8 +64,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 | sound | ALC233-CG, internal mono speaker |
 | pcie | nvme (31.504 Gb/s PCIe bandwidth, 8.0 GT/s PCIe x4, cpu channel), wifi (?, x1, cpu channel), lan (?, x1, RT8111EPV, 1Gbit, cpu channel) |
 | sata | x1 3.0 (6Gbit/s) |
-| multicontroller (motherboard) | ITE 8738 |
-| additional controller (motherboard) | NPCT652L (FAN, ?..com_port,ps/2,crtl?) |
+| multicontroller (motherboard) | ITE 8738 (FAN, COMPORT, ...) |
+| additional controller (motherboard) | NPCT652L (TPM) |
 | usb 2.0 | single GL852G-MNY50 (480mb/s cpu channel common for all usb 2.0 ports for this mini pc) |
 | usb 3.0 | x1 (in front near the button), x1 (in front near the red line, ability to charge when the device is turned off), x1 (near the power connector). Despite the presence of three ports, they all use one common bus limited to 10 Gbps/s cpu channel (either one port utilizing 10 Gbps (support for USB 3.1 gen 2, 10 Gbps not tested), or two ports utilizing 5 Gbps, or three ports utilizing 3.3 Gbps). |
 | gpio list | ? |
