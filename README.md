@@ -127,16 +127,14 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 | what needs to be entered |90|       80|       8a|  80 |       50 |
 | what needs to be entered |8|        8|        C|    10 |       10 |
 | what needs to be entered |29|       29|       5C| 6C |       7C|
-</details>
-
-
-
 
 | :memo:        | <b>This section is not complete, I have not yet decided on the voltage, and you should also understand that not every processor will be able to work at a lower voltage with the frequencies specified here.</b>    |
 |---------------|:-------------------------------------------|
+</details>
 
-### For extreme overclocking (in case of an error, reflash the BIOS)
-
+<details> 
+  <summary><b># ?, for extreme overclocking (in case of an error, reflash the BIOS)</b></summary>
+  
 | Voltage | Ghz |
 | ------- | --- |
 | 1,3 ≤ 1,288 | <b>3.929</b> |
@@ -145,12 +143,14 @@ Added lower voltages for higher frequencies. Also added 1.0 GHz and added overcl
 | 1,45 ≤ 1,444 | <b>4.076</b> |
 | 1,5 ≤ 1,494 | <b>4.129</b> |
 
-
 | :exclamation:        | <b>The parameters may be unique to your processor, so the values ​​are approximate.</b>       |
 |---------------|:-------------------------------------------|
+</details>
 
-## Processor scalping (tested on 2200GE and 2400GE)
+## Improve cooling
 
+<details> 
+  <summary><b># Processor scalping (tested on 2200GE and 2400GE)</b></summary>
 <b><img src="./img/cpu_scalping.jpg" width="30%"></img></b>
 
 Few people know that AMD APUs have thermal paste inside, and quite a thick layer at that, and this thermal paste dries out over time. For effective scalping, it is recommended to soak the processor in a solvent for 10-20 minutes, then cut off the sealant with a razor blade (be extremely careful or skip the scalping step, or better yet, buy a ready-made scalping kit for such processors). It is important not to scratch the printed circuit board, as this can damage the APU. Next, you can apply a thin layer of liquid metal to the processor, for example, with cotton swabs, or try not to use the processor cover at all (not tested and most likely impossible with this cooling system) and seal the processor cover with sealant (if the cover is not glued, there is a risk of metal leakage outside the processor).
@@ -162,9 +162,12 @@ It is also recommended to isolate the APU components by coating them with varnis
 
 | :exclamation:        | <i><b>DO NOT</b> try to apply liquid metal between the cooler and the processor cover, even if it is copper (pure copper will absorb liquid metal over time and worsen the cooling), you can easily kill the cooling system.</i>       |
 |---------------|:-------------------------------------------|
+</details>
 
 ## Unlock CPU TDP (only for GEN 2)
 
+<details> 
+  <summary><b># ryzenadj</b></summary>
 At the moment this problem is not solved at the BIOS level, but is solved at the operating system level (Windows or Linux).
 
 | name | value |
@@ -214,12 +217,12 @@ ryzenadj --stapm-limit=60000
 
 | :memo:        | <b>This section is not complete.</b>       |
 |---------------|:-------------------------------------------|
-
+</details>
 
 ## Known issues
 
-#### • Poor performance after reboot (gen2, linux)
-
+<details open> 
+  <summary><b>• Poor performance after reboot (gen2, linux)</b></summary>
 It has been observed that if the system is rebooted (e.g. with reboot command), the Linux tsc clock source is always lost, which causes the whole system performance to drop to very low levels (CPU, RAM). This issue is not fixed by BIOS updates and seems to have been around for a long time. If you set tsc=unstable then the performance on reboot is always constant but also slightly lower than on first boot, which suggests that there really is some problem with tsc.
 
 ```dmesg
@@ -237,9 +240,10 @@ It has been observed that if the system is rebooted (e.g. with reboot command), 
 ```
 | :memo:        | <b>There is currently no complete solution to this problem, you can simply turn on/off the device instead of rebooting.</b>       |
 |---------------|:-------------------------------------------|
+</details>
 
-#### • `amd_pstate` not working (gen2, linux)
-
+<details> 
+  <summary><b># `amd_pstate` not working (gen2, linux)</b></summary>
 While this is not a specific CPU frequency and voltage management issue on this device, since `acpi-cpufreq` works fine and well, it is impossible not to mention it.
 
 ```dmesg
@@ -253,9 +257,10 @@ While this is not a specific CPU frequency and voltage management issue on this 
 
 | :memo:        | <b>The solution has not yet been found.</b>       |
 |---------------|:-------------------------------------------|
+</details>
 
-#### • The integrated video card switches off from time to time, which is especially noticeable on `linux zen` kernels  (gen2, 2400GE, linux)
-
+<details> 
+  <summary><b># The integrated video card switches off from time to time, which is especially noticeable on `linux zen` kernels  (gen2, 2400GE, linux)</b></summary>
 Your video card may sometimes turn off and you won't even know why. In dmesg logs you will only see that your video card turned off and on, and some games may show various strange effects. This problem is relevant on modern Linux (2025) and repeats itself over and over again without any symptoms (most likely at times when your gpu frequency increases).
 
 Solution, you need to add this to cmdline:
@@ -267,4 +272,5 @@ And add this to the file `/etc/environment`
 ```
 AMD_DEBUG=nodcc
 ```
+</details>
 
