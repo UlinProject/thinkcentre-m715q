@@ -225,7 +225,7 @@ ryzenadj --stapm-limit=60000
 </details>
 
 ## Board power
-Usually m715q of the first and second generations are equipped with a 65W power supply. To overclock this mini-PC, you will obviously need a more powerful power supply, for example, 90 or even 120W. I will say right away that software (with the help of Ryzenadj and other similar solutions this can be solved) this motherboard is locked at 65W. In addition, in addition to software limitation of processor power, the board has a hardware current sensor based on `ina300`, which limits the total power of the board and in case of excess requests the multicontroller to throttle the processor, which is surprising but this current sensor is really configured depending on the power of the power supply (support for 65W, 90W, 120W is declared), this was checked on 65W, 90W power supplies.
+Typically, the first and second generation m715q are equipped with a 65W power supply. To overclock this mini PC, you will obviously need a more powerful power supply, for example, 90 or even 120W. Let me say right away that (with the help of Ryzenadj and other similar solutions, this is solved) this motherboard is software-locked at 65W. In addition, in addition to the software limitation of the processor power, the board has a hardware current sensor based on ina300, which limits the total power of the board and, if exceeded, requests the multicontroller to throttle the processor. Surprisingly, this current sensor is actually configured depending on the power of the power supply (support for 65W, 90W, 120W is declared), this is checked on 65W, 90W power supplies.
 
 <details> 
   <summary><b># Scheme</b></summary>
