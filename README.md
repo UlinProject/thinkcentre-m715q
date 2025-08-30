@@ -74,6 +74,8 @@ This is a collection of mods that can be performed on the m715q to get the most
 
 <i>Fun fact:</i> There is a USB 3.0 port underneath the Ethernet port, but the USB 3.0 lines aren't actually connected to anything, and its original functionality remains a mystery. However, upon inspection, traces were found leading to a multi-controller.
 
+<i>Interesting fact:</i> On Gen1, on the back side of the board, there are contacts for soldering the second SATA port (I haven’t tested its functionality), on Gen2 these contacts are no longer there.
+
 ## Converting a Gen1 board to a Gen2 board
 
 <b><img src="./img/convert.jpg" width="40%"></img></b>
@@ -221,6 +223,9 @@ ryzenadj --stapm-limit=60000
 | :memo:        | <b>This section is not complete.</b>       |
 |---------------|:-------------------------------------------|
 </details>
+
+## Board power
+Usually m715q of the first and second generations are equipped with a 65W power supply. To overclock this mini-PC, you will obviously need a more powerful power supply, for example, 90 or even 120W. I will say right away that software (with the help of Ryzenadj and other similar solutions this can be solved) this motherboard is locked at 65W. In addition, in addition to software limitation of processor power, the board has a hardware current sensor based on `ina300`, which limits the total power of the board and in case of excess requests the multicontroller to throttle the processor, which is surprising but this current sensor is really configured depending on the power of the power supply (support for 65W, 90W, 120W is declared), this was checked on 90W, 120W power supplies.
 
 ## Known issues
 
