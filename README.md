@@ -227,6 +227,23 @@ ryzenadj --stapm-limit=60000
 ## Board power
 Usually m715q of the first and second generations are equipped with a 65W power supply. To overclock this mini-PC, you will obviously need a more powerful power supply, for example, 90 or even 120W. I will say right away that software (with the help of Ryzenadj and other similar solutions this can be solved) this motherboard is locked at 65W. In addition, in addition to software limitation of processor power, the board has a hardware current sensor based on `ina300`, which limits the total power of the board and in case of excess requests the multicontroller to throttle the processor, which is surprising but this current sensor is really configured depending on the power of the power supply (support for 65W, 90W, 120W is declared), this was checked on 90W, 120W power supplies.
 
+<details> 
+  <summary><b># Scheme</b></summary>
+  <b><img src="./img/board_power.jpg" width="30%"></img></b>
+  <b><img src="./img/board_power_scheme.png" width="30%"></img></b>
+</details>
+
+<details> 
+  <summary><b># 01 ModDisIna</b></summary>
+  The entire protection of the ina300 current sensor is based on the fact that the multicontroller sets the maximum consumption level of the board with two outputs (see the "Limitations" branch). When this limit is exceeded, an alert is triggered, which is also sent to the multicontroller. The multicontroller, receiving such a signal, does nothing except send a signal to slow down the processor. The multicontroller also has an output that activates or deactivates this protection; by default, it is always active. In general, this protection is adequate, except that the moment of receiving the signal, the moment of installation, the moment of operation and the moment of throttling - all this happens through the multicontroller, although this should be implemented in hardware. 
+  
+  There is a theory that initially they wanted to enable and disable this protection programmatically, but, as usual, they did not give access to it. The essence of the modification: to rearrange the 1 kOhm switch-on resistor for ina300, by default this resistor transmits a signal from the multicontroller to the en pin of ina300, by rearranging the resistor to lower landing places you will permanently set the en pin to ground, thereby disabling the ina300 sensor, the notification is always pulled up to the plus and will not ask to throttle the processor when the sensor is disabled!
+  
+  # <b>You must understand why you need this, do it only at your own risk!</b>
+  
+  <b><img src="./img/board_power_moddisina.jpg" width="30%"></img></b>
+</details>
+
 ## Known issues
 
 <details open> 
