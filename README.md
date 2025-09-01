@@ -14,13 +14,14 @@
 </div>
 
 ## Description
-This is a collection of mods that can be performed on the m715q to get the most out of these little computers. Mods require some level of skill and equipment, depending on which mod is performed.
+This is a collection of my experimental modifications that can be done on the m715q to get the most out of this little computer. Modifications require a certain level of skill and equipment, depending on the type of modification.
 
 ## Disclaimer
 | :boom: Disclaimer          |
 |:---------------------------|
 |  :warning:  Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there. |
 |  :warning:  <b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures. |
+|  :warning: Any information described here is research information. |
 |  :warning:  All rights reserved. |
 
 ## Specifications
@@ -242,6 +243,8 @@ Typically, the first and second generation m715q are equipped with a 65W power s
   # <b>You must understand why you need this, do it only at your own risk!</b>
   
   <b><img src="./img/board_power_moddisina.jpg" width="30%"></img></b>
+
+  In my case I got a stable working device on both gen1 and gen2 from a 90W power supply with a maximum CPU consumption of 42W (on gen2 there were strange long dips in operation without load).
 </details>
 
 ## Known issues
@@ -280,6 +283,8 @@ While this is not a specific CPU frequency and voltage management issue on this 
 [    6.884037] amd_pstate_ut: 5    amd_pstate_ut_check_driver	 success!
 ```
 
+The official solution to this issue is to upgrade to Ryzen 3 or higher, but there is currently no solution to upgrade to a more powerful processor.
+
 | :memo:        | <b>The solution has not yet been found.</b>       |
 |---------------|:-------------------------------------------|
 </details>
@@ -299,3 +304,17 @@ AMD_DEBUG=nodcc
 ```
 </details>
 
+<details> 
+  <summary><b># The video card only works at low frequencies or only at high frequencies (gen2, 2400ge, linux)</b></summary>
+This problem is observed in the latest version of Archlinux, and the reason is not entirely clear. By default, the frequency of the video card should be adjusted depending on the load on the video card, but for some unknown reason (in my case) it is low.
+
+```
+echo "high" | tee  /sys/class/drm/card1/device/power_dpm_force_performance_level
+echo "performance" | tee  /sys/class/drm/card1/device/power_dpm_state
+echo "auto" | tee  /sys/class/drm/card1/device/power_dpm_force_performance_level
+echo "balanced" | tee  /sys/class/drm/card1/device/power_dpm_state
+```
+
+If you add this meaningless code (transition from auto to hight, from high to balanced) to rc.local, the problem is solved.
+
+</details>
