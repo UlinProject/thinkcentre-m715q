@@ -59,7 +59,7 @@ This is a collection of my experimental modifications that can be done on the m7
 | maximum cpu | Ryzen 5 PRO 2400GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
 | standard cpu | Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/ 3.8Ghz?) (turbo: single core x1 3.6Ghz)) |
 | mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
-| mem (unofficially) | DDR4-3200, (max: 64Gb (<b>not tested</b>)) |
+| mem (unofficially) | DDR4-3200, DDR4-3400, (max: 64Gb (<b>not tested</b>)) |
 | bios | MX25U12835F (16mb/128mbit, 1.8v) |
 | vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
@@ -108,7 +108,7 @@ Please note that many settings in this unlocked BIOS are stored only in the BIOS
 | comment                  | 0 |        1|         2|         3|                 4    |
 | -----------------------| --------  | --------| --------   |  --------    | -------- |
 | should be displayed      |3800 Mhz | 3600 Mhz| 2300 Mhz   |  1600 Mhz    | 1000 Mhz |
-| should be displayed      |1.3000000| 1.293750| 393750 (?) |   393750 (?) |  393750  |
+| should be displayed      |1.293750| 1.293750| 393750 (?) |   393750 (?) |  393750  |
 | what needs to be entered |98       |       90|       8a   |   80         |       50 |
 | what needs to be entered |8        |        8|        C   |   10         |       10 |
 | what needs to be entered |29       |       29|       b9   |   b9         |       b9 |
@@ -317,4 +317,9 @@ echo "balanced" | tee  /sys/class/drm/card1/device/power_dpm_state
 
 If you add this meaningless code (transition from auto to hight, from high to balanced) to rc.local, the problem is solved.
 
+</details>
+
+<details> 
+  <summary><b># I try to change video memory size to 1/2/8/.. GB but it doesn't happen (gen2, 2400ge, linux)</b></summary>
+Turn off the device completely by disconnecting it from the power source, insert the power source and turn it on, then your video memory capacity will change.
 </details>
