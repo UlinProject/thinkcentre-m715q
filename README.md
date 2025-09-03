@@ -244,7 +244,7 @@ Typically, the first and second generation m715q are equipped with a 65W power s
   
   <b><img src="./img/board_power_moddisina.jpg" width="30%"></img></b>
 
-  In my case I got a stable working device on both gen1 and gen2 from a 90W power supply with a maximum CPU consumption of 42W (on gen2 there were strange long dips in operation without load).
+  In my case, after modification, I got a stable working device both on gen1 and gen2 from a 90W power supply with a maximum processor consumption of 42W, previously on gen2 there were strange, random long dips in operation without load.
 </details>
 
 ## Known issues
