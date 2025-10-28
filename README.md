@@ -59,7 +59,7 @@ This is a collection of my experimental modifications that can be done on the m7
 | maximum cpu | Ryzen 5 PRO 2400GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
 | standard cpu | Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/ 3.8Ghz?) (turbo: single core x1 3.6Ghz)) |
 | mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
-| mem (unofficially) | DDR4-3200, DDR4-3400, (max: 64Gb (<b>not tested</b>)) |
+| mem (unofficially) | DDR4-3200, DDR4-3400, (max: 64Gb (<b>not tested, but I checked 40 GB and everything works</b>)) |
 | bios | MX25U12835F (16mb/128mbit, 1.8v) |
 | vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
