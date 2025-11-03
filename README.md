@@ -59,7 +59,7 @@ This is a collection of my experimental modifications that can be done on the m7
 | maximum cpu | Ryzen 5 PRO 2400GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/3.8Ghz) (turbo: single core x1 3.8Ghz)) |
 | standard cpu | Ryzen 3 PRO 2200GE (x4 3.2Ghz (support overclock on all cores: 3.6Ghz/ 3.8Ghz?) (turbo: single core x1 3.6Ghz)) |
 | mem (officially, 2200GE) | DDR4-2933, max: 32Gb 
-| mem (unofficially) | DDR4-3200, DDR4-3400, (max: 64Gb (<b>not tested, but I checked 40 GB and everything works</b>)) |
+| mem (unofficially) | DDR4-3200, DDR4-3400, DDR4-3466, (max: 64Gb (<b>not tested, but I checked 40 GB and everything works</b>)) |
 | bios | MX25U12835F (16mb/128mbit, 1.8v) |
 | vrm | ISL62773 (0.5V-1.55V) |
 | sound | ALC233-CG, internal mono speaker |
@@ -85,9 +85,9 @@ Although the boards are slightly different, a Gen1 board can easily be converted
 
 The GEN1 board has a Winbond 25q64fwsig BIOS chip (see photos for chip location). You should replace this chip with a 16MB BIOS chip, such as the MX25U12835F or W25Q128FWSIG.
 
-BIOS chips are rated for 1.8V only. Do not attempt to solder a 3.3V chip. You will also need a 1.8V module for your programmer to flash the chip (flashing at 3.3V may damage the chip or result in an incomplete flash).
+BIOS chips are rated for 1.8V only. <b>Do not attempt to solder a 3.3V chip.</b> You will also need a 1.8V module for your programmer to flash the chip (flashing at 3.3V may damage the chip or result in an incomplete flash).
 
-The BIOS chip should be flashed with a stock BIOS or a modified BIOS from the repository (note that these have test serial numbers embedded in them)
+The BIOS chip should be flashed with a stock BIOS or a modified BIOS from the repository (please note that these may contain test serial numbers)
 
 ## Unlocked BIOS
 Please note that there is an unlocked BIOS dump available in the repository, taken from a public source. It can do many things, such as enable overclocking and allocate video memory (up to 10GB, I think).
@@ -317,6 +317,11 @@ echo "balanced" | tee  /sys/class/drm/card1/device/power_dpm_state
 
 If you add this meaningless code (transition from auto to hight, from high to balanced) to rc.local, the problem is solved.
 
+</details>
+
+<details> 
+  <summary><b># My RAM only runs at 2666 MT/S effective frequency, even though it claims to support 3200 MT/S profile. (gen2, linux)</b></summary>
+Make sure your memory actually supports this configuration. In this case, simple overclocking usually helps, setting a fixed, ineffective frequency (for example, 1600, which corresponds to an effective frequency of 3200). If you want to increase the frequency, do so gradually. If you make a mistake, the computer will not boot and beep. However, the BIOS has a protection feature, and on the fifth boot, the computer will boot at the default RAM frequency.
 </details>
 
 <details> 
