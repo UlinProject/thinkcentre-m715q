@@ -339,5 +339,5 @@ Even enabling FULL_SPEED fan mode on the ICU won't solve the problem.
 
 Interestingly, similar solutions, such as the HP Elitedesk 705 G4 (the one I tested), don't have a 65°C limit and allow overclocking (~3.3 GHz) at 80°C, but their cooling system is designed with the VRM, CPU, and even RAM in mind.
 
-For now, you can simply configure the Ryzen 7 to stay within 65°C using a limiter (in my case, TDP-50, FAST/SLOW-60).
+For now, you can simply configure the Ryzenadj to stay within 65°C using a limiter (in my case, TDP-50, FAST/SLOW-60).
 </details>
