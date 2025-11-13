@@ -328,3 +328,16 @@ Make sure your memory actually supports this configuration. In this case, simple
   <summary><b># I try to change video memory size to 1/2/8/.. GB but it doesn't happen (gen2, 2400ge, linux)</b></summary>
 Turn off the device completely by disconnecting it from the power source, insert the power source and turn it on, then your video memory capacity will change.
 </details>
+
+<details> 
+  <summary><b># My hardware is strictly limited to 65 degrees (gen2, 2400ge, linux) (will be supplemented)</b></summary>
+You might think that the processor wouldn't exceed 65°C (148°F) in its stock configuration, but with Ryzenadj or other unlocking methods, you'll notice a CPU temperature cap of 65°C (148°F), along with an unpleasant surprise: a frequency cap of around 500 MHz at 65°C (148°F). This limitation is likely due to the lack of cooling in the VRM area, but even adding active VRM cooling won't unlock the processor. (Previously, experimenting with pstate allowed me to shift the 500 MHz -> 1 Ghz/1.5 Ghz cap, but I'm tired of flashing the BIOS.)
+
+I'm currently looking for a software (BIOS) solution to address this issue. As a last resort, cutting a trace on the board is an option, but even that's not sure it will solve the problem. I'll need to thoroughly inspect the board (preferably with a thermal camera) to identify other issues or limitations preventing the processor temperature from exceeding 65°C.
+
+Even enabling FULL_SPEED fan mode on the ICU won't solve the problem.
+
+Interestingly, similar solutions, such as the HP Elitedesk 705 G4 (the one I tested), don't have a 65°C limit and allow overclocking (~3.3 GHz) at 80°C, but their cooling system is designed with the VRM, CPU, and even RAM in mind.
+
+For now, you can simply configure the Ryzen 7 to stay within 65°C using a limiter (in my case, TDP-50, FAST/SLOW-60).
+</details>
