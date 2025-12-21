@@ -1,11 +1,12 @@
 ## Disclaimer
-| :boom: Disclaimer          |
-|:---------------------------|
-|  :warning:  Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there. |
-|  :warning:  <b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures. |
+| :boom: Disclaimer |
+|:------------------|
+| :warning: Lenovo is a registered trademark. The author has no affiliation with Lenovo and does not provide hardware advice. For official support, please refer to Lenovo’s website. |
+| :warning: Your actions and the information described here are entirely at your own risk. The author is not responsible for any damage to your devices. |
+| :warning: All information provided is based on personal research and may contain errors. |
 |  :warning: <b>Please note that many settings in this diff BIOS are stored only in the BIOS chip. If you incorrectly overclock/undervolt your CPU, you will not be able to boot until you reflash the BIOS chip.</b> |
-|  :warning: Any information described here is research information. |
-|  :warning:  All rights reserved. |
+| :warning: This material is for informational purposes only. |
+
 
 ## original
 
