@@ -17,12 +17,12 @@
 This is a collection of my experimental modifications that can be done on the m715q to get the most out of this little computer. Modifications require a certain level of skill and equipment, depending on the type of modification.
 
 ## Disclaimer
-| :boom: Disclaimer          |
-|:---------------------------|
-|  :warning:  Lenovo is a registered trademark, I have no relation to Lenovo, I do not give advice on equipment, if you want to know more about this computer, you can find contacts on lenovo.com and ask there. |
-|  :warning:  <b>You can do what is described here only at your own risk.</b> Damage to your computer may occur at any stage of these procedures. |
-|  :warning: Any information described here is research information. |
-|  :warning:  All rights reserved. |
+| :boom: Disclaimer |
+|:------------------|
+| :warning: Lenovo is a registered trademark. The author has no affiliation with Lenovo and does not provide hardware advice. For official support, please refer to Lenovo’s website. |
+| :warning: Your actions and the information described here are entirely at your own risk. The author is not responsible for any damage to your devices. |
+| :warning: All information provided is based on personal research and may contain errors. |
+| :warning: This material is for informational purposes only. |
 
 ## Specifications
 
